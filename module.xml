@@ -1,0 +1,24 @@
+<module>
+	<rawname>itslenny</rawname>
+	<name>Its Lenny</name>
+	<version>0.0.0.4</version>
+	<license>GNU GPL2</license>
+	<type>setup</type>
+	<category>Applications</category>
+	<menuitems>
+		<itslenny>Its Lenny</itslenny>
+	</menuitems>
+    <publisher>RECONWIRELESS</publisher> 
+	<description>
+                It's Lenny Revenge on Telemarketers
+        </description>
+	 <changelog>
+			*0.0.0.4 adding email option
+			*0.0.0.3 really don't know what I'm doing
+			*0.0.0.2 2nd Module trial fix info page
+			*0.0.0.1 1st Module trial  
+			*0.0.0* 1st Temp Build  
+        </changelog>
+	<info>https://github.com/reconwireless/freepbx-itslenny</info>
+	<location>https://github.com/reconwireless/freepbx-itslenny</location>
+ </module>
