@@ -83,10 +83,10 @@ if (DB::IsError($check))
 }
 ?>
 <?php
- Register FeatureCode - Its Lenny;
-$fcc = new featurecode('itslenny', 'itslenny');
-$fcc->setDescription('It's Lenny');
-$fcc->setDefault('*53669');
-$fcc->update();
-unset($fcc);
+// Register FeatureCode - Its Lenny;
+//$fcc = new featurecode('itslenny', 'itslenny');
+//$fcc->setDescription('It's Lenny');
+//$fcc->setDefault('*53669');
+//$fcc->update();
+//unset($fcc);
 ?>
