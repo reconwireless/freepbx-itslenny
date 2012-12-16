@@ -66,7 +66,7 @@ function itslenny_get_config($engine) {
 function itslennyoptions_getconfig() {
 	#print_r($results);
 	#die();
-	require_once 'DB.php';
+	global $db;
 	$sql = "SELECT * FROM itslennyoptions LIMIT 1";
 	$results= sql($sql, "getAll");
 	$tmp = $results[0][4];
@@ -80,7 +80,7 @@ function itslennyoptions_getconfig() {
 
 function itslennyoptions_saveconfig() {
 
-	require_once 'DB.php';
+	global $db;
 
 	# clean up
 	$engine = mysql_escape_string($_POST['engine']);
