@@ -11,13 +11,7 @@
 //MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 //GNU General Public License for more details.
 
-// check to see if user has automatic updates enabled
-//$cm =& cronmanager::create($db);
-//$online_updates = $cm->updates_enabled() ? true : false;
 
-// check if new version of module is available
-//if ($online_updates && $foo = teletorture_vercheck()) {
-	//print "<br>A <b>new version</b> of this module is available from the <a target='_blank' href='http://github.com/reconwireless/freepbx-teletorture/downloads'>Reconwireless Repository on Github</a><br>";
 }
 
 //tts_findengines()
@@ -25,10 +19,7 @@ if(count($_POST)){
 	itslennyoptions_saveconfig();
 }
 	$itslennyemail = itslennyoptions_getconfig();
-	
 
-
-?>
 <form method="POST" action="">
 	<br><h2><?php echo _("itslenny")?><hr></h5></td></tr>
 Its Lenny allows you to route calls to an IVR Torture Chamber, or send your blacklisted calls to ItsLenny.com <br>
@@ -47,4 +38,3 @@ Support, documentation and current versions are available at the <a target="_bla
 <?php
 //print '<p align="center" style="font-size:11px;">The Teletorture Module was originally created by jfinstrom and Its Lenny Dialplann was built on the PIAF forum <a target="_blank" href="http://pbxinaflash.com/community/index.php?threads/revenge-on-telemarketers.14749/page-3#post-96374">on this post</a>.';
 
-?>
