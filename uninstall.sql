@@ -1,1 +1,1 @@
-DROP TABLE IF EXISTS `itslennyoptions`;
+DROP TABLE IF EXISTS `itslennyeoptions`;

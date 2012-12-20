@@ -1,6 +1,6 @@
-Installing It's Lenny Module<br>
+Installing Its Lenny<br>
 <h5>Telemarketer Revenge</h5>
-This module will record calls if selected please make sure you are not breaking the laws of your State/Region/Territory/Country by doing so.<br>
+This module will record calls please make sure you are not breaking the laws of your State/Region/Territory/Country by doing so.<br>
 <?php
 if ( (isset($amp_conf['ASTVARLIBDIR'])?$amp_conf['ASTVARLIBDIR']:'') == '') {
 	$astlib_path = "/var/lib/asterisk";
@@ -12,12 +12,13 @@ if ( (isset($amp_conf['ASTVARLIBDIR'])?$amp_conf['ASTVARLIBDIR']:'') == '') {
 ?><br>Installing Default Configuration values.<br>
 <?php
 
-$sql ="INSERT INTO itslennyoptions (engine, itslennyemail) ";
-$sql .= "               VALUES ('app-blacklist-check',        '')";
+$sql ="INSERT INTO itslennyoptions (itslennyemail) ";
+$sql .= "               VALUES ('ROOT')";
 $check = $db->query($sql);
 if (DB::IsError($check)) {
         die_freepbx( "Can not create default values in `itslennyoptions` table: " . $check->getMessage() .  "\n");
 }
+
 
 // Add dialplan include to asterisk conf file
 $filename = '/etc/asterisk/extensions_override_freepbx.conf';
@@ -65,28 +66,5 @@ if (is_writable($filename)) {
 } else {
     echo "The file $filename is not writable";
 }
-?>Verifying / Installing cronjob into the FreePBX cron manager.<br>
-<?php
-$sql = "SELECT * FROM `cronmanager` WHERE `module` = 't' LIMIT 1;";
-
-$res = $db->query($sql);
-
-if($res->numRows() != 1)
-{
-$sql = "INSERT INTO	cronmanager (module,id,time,freq,command) VALUES ('itslenny','every_day',23,24,'/usr/bin/find /var/lib/asterisk/sounds/tts -name \"*.wav\" -mtime +1 -exec rm {} \\\;')";
-
-$check = $db->query($sql);
-if (DB::IsError($check))
-	{
-	die_freepbx( "Can not create values in cronmanager table: " . $check->getMessage() .  "\n");
-	}
-}
 ?>
-<?php
-// Register FeatureCode - Its Lenny;
-//$fcc = new featurecode('itslenny', 'itslenny');
-//$fcc->setDescription('It's Lenny');
-//$fcc->setDefault('*53669');
-//$fcc->update();
-//unset($fcc);
-?>
+
