@@ -238,7 +238,6 @@ function itslenny_destinations(){
 function itslenny_options_getconfig() {
 	#print_r($results);
 	#die();
-	require_once 'DB.php';
 	$sql = "SELECT * FROM itslennyoptions LIMIT 1";
 	$results= sql($sql, "getAll");
 	$tmp = $results[0][4];
