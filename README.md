@@ -9,7 +9,7 @@ freepbx-itslenny
 
 Its Lenny Dialplan created by lgeatz & Ramblin from the PIAF Forums
 
-It's Lenny Sip Service provided by itslenny.com
+It's Lenny Sip Service provided by itslenny.com (now defunct, need to merge with POSSA version)
 
 Specifically this thread
 http://pbxinaflash.com/community/index.php?threads/revenge-on-telemarketers.14749/
